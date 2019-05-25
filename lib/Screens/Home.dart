@@ -30,12 +30,14 @@ class _HomePageState extends State<HomePage> {
         body: loading
             ? Center(child: CircularProgressIndicator())
             : ListView.separated(
-                separatorBuilder: (context, index) => Divider(),
+                separatorBuilder: (context, index) => Divider(height: 2.0),
                 itemCount: this.list.length,
                 itemBuilder: (BuildContext context, int index) {
                   return ListTile (
-                    contentPadding: EdgeInsets.all(10.0),
-                    title: new Text(list[index].token),
+                    contentPadding: EdgeInsets.all(16.0),
+                    title: Text(
+                      'Parcel at storey ${list[index].etage} Box ${list[index].lockNumber}',
+                      style: TextStyle(fontSize: 18.0)),
                     onTap: () {
                       Navigator.push(
                         context,
@@ -45,8 +47,13 @@ class _HomePageState extends State<HomePage> {
                           )
                         ),
                       );
-                    }
+                    },
+                    trailing: Icon(
+                      Icons.redeem,
+                      color: Colors.green[600],
+                      ),
                   );
+                  
                 },
               ));
   }

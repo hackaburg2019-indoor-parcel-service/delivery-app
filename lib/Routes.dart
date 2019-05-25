@@ -22,6 +22,9 @@ class Routes {
           );
         }
       },
+      theme: ThemeData(
+        primaryColor: Colors.green[600],
+      )
     ));
   }
 }
