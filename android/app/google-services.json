@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "169522025881",
+    "firebase_url": "https://hackaburgparcel.firebaseio.com",
+    "project_id": "hackaburgparcel",
+    "storage_bucket": "hackaburgparcel.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169522025881:android:26442593b9ebe531",
+        "android_client_info": {
+          "package_name": "com.example.package_delivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "169522025881-8gg9d4bp3ra9cfe8ccmv22kg4qiulsd4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJj97aOZlr2RApR9c9YxnAAAVX0Z5DSYs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "169522025881-8gg9d4bp3ra9cfe8ccmv22kg4qiulsd4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

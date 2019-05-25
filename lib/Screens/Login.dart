@@ -51,22 +51,17 @@ class _LoginPageState extends State<LoginPage> {
               obscureText: true,
               controller: passwordController,
             ),
-            ButtonBar(
-              children: <Widget>[
-                FlatButton(
-                  child: Text('CANCEL'),
-                  onPressed: () {},
-                ),
-                RaisedButton(
-                  child: Text('NEXT'),
-                  onPressed: () {
-                    _login();
-                    // Navigator.pushReplacementNamed(context, '/home');
-                  },
-                )
-              ],
-            )
-          ],
+            Center(
+              child: RaisedButton(
+                child: Text('Login'),
+                onPressed: () {
+                  _login();
+                  // Navigator.pushReplacementNamed(context, '/home');
+                },
+                color: Colors.green,
+              )
+            ),
+          ]
         ),
       ),
     );
@@ -88,7 +83,6 @@ class _LoginPageState extends State<LoginPage> {
         waitingForLoginResponse = false;
       });
       LoginResponse loginResponse = LoginResponse.fromJson(json.decode(response.body));
-      print(loginResponse.token);
       userData.token = loginResponse.token;
       userData.user = loginResponse.user;
       Navigator.pushReplacementNamed(context, '/home');
@@ -107,5 +101,4 @@ void loginTest(String _username, String _password) async {
   final response = await http.post(
       'http://app02.dev.nue.schneider-its.net:3001/v1/auth/login',
       body: map);
-  print(response.body);
 }
