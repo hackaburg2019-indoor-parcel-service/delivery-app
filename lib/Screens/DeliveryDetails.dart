@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:package_delivery/Screens/Home.dart';
+import 'package:package_delivery/Types/Delivery.dart';
 
 class DeliveryDetails extends StatelessWidget {
   final Delivery delivery;

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:package_delivery/singletons/Userdata.dart';
+import 'package:package_delivery/Types/LoginResponse.dart';
 
 import 'dart:convert';
 
@@ -107,15 +108,4 @@ void loginTest(String _username, String _password) async {
       'http://app02.dev.nue.schneider-its.net:3001/v1/auth/login',
       body: map);
   print(response.body);
-}
-
-class LoginResponse {
-  final String token;
-  final String user;
-
-  LoginResponse({this.token, this.user});
-
-  factory LoginResponse.fromJson(Map<String, dynamic> json) {
-    return LoginResponse(user: json['data']['user'], token: json['data']['token']);
-  }
 }
